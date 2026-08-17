@@ -31,7 +31,7 @@ def init_chain():
     try:
         from langchain_groq import ChatGroq
         api_key = st.secrets["GROQ_API_KEY"]
-        llm = ChatGroq(api_key=api_key, model_name="llama-3.1-8b-instant", temperature=0)
+        llm = ChatGroq(api_key=api_key, model_name="gpt-oss-20b", temperature=0)
     
     # Si da error (estamos en local/Docker sin el archivo secrets), usar Ollama
     except Exception:
